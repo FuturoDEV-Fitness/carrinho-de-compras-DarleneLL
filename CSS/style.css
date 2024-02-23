@@ -1,0 +1,30 @@
+/* Crie um arquivo CSS chamado styles.css e adicione um estilo básico para o 
+cabeçalho, o conteúdo principal e o rodapé */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+ }
+
+ .header{
+    color: rgb(166, 87, 30);
+    background-color: rgb(199, 211, 153);
+    border: 1px solid rgb(108, 151, 182);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+
+}
+.main{
+    background-color: rgb(171, 217, 170);
+    height: 78vh;
+    padding: 20px;
+}
+.footer{
+    color: rgb(42, 42, 77);
+    background-color: rgb(199, 211, 153);
+    border: 1px solid rgb(108, 151, 182);
+}
