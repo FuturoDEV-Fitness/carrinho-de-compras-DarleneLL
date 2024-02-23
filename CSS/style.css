@@ -20,11 +20,42 @@ cabeçalho, o conteúdo principal e o rodapé */
 }
 .main{
     background-color: rgb(171, 217, 170);
-    height: 78vh;
-    padding: 20px;
+    height: 85vh;
+    display: flex;
+ }
+
+.conteudo{
+    flex: 3; /* O conteúdo principal ocupa 3/4 do espaço disponível */
+}
+
+.dados{
+    padding: 30px;
+}
+.image{
+    padding-top: 20px;
+    width: 100px;
+    height: 120px;
+    border-radius: 100%;
+}
+
+.cont{
+    display: flex;
+    padding-top: 30px;
+    margin-left: 10px;
+ }
+
+.biografia{
+    padding-left: 25px;
+}
+
+.ad {
+    background-color: #c1f0db;
+    padding: 10px;
+    border-radius: 5px;
 }
 .footer{
     color: rgb(42, 42, 77);
     background-color: rgb(199, 211, 153);
     border: 1px solid rgb(108, 151, 182);
 }
+
