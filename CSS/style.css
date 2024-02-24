@@ -47,6 +47,24 @@ cabeçalho, o conteúdo principal e o rodapé */
 .biografia{
     padding-left: 25px;
 }
+.button{
+    margin-top: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px; 
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
 
 .ad {
     background-color: #c1f0db;
