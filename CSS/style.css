@@ -1,11 +1,10 @@
-/* Crie um arquivo CSS chamado styles.css e adicione um estilo básico para o 
+/* Exercício 2: Crie um arquivo CSS chamado styles.css e adicione um estilo básico para o 
 cabeçalho, o conteúdo principal e o rodapé */
 
 *{
     margin: 0;
     padding: 0;
     border: 0;
-    
  }
 
  .header{
@@ -44,9 +43,10 @@ cabeçalho, o conteúdo principal e o rodapé */
     margin-left: 10px;
  }
 
-.biografia{
+.descricao{
     padding-left: 25px;
 }
+
 .button{
     background-color: #4CAF50;
     border: none;
@@ -62,9 +62,26 @@ cabeçalho, o conteúdo principal e o rodapé */
 }
 
 .button:hover {
-    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    background-color: #0a2e0c; /* Cor de fundo ao passar o mouse */
 }
 
+.form {
+    background-color: bisque;
+    padding: 30px;   
+}
+
+label {
+    /* Adicione estilos para rótulos */
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo {
+    display: inline-block;
+    width: 200px;
+}
 .ad {
     background-color: #c1f0db;
     padding: 10px;
