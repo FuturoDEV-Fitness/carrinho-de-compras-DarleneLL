@@ -46,6 +46,15 @@ static async create(request, response) {
     }
 }
 
+static async getAllProducts(request, response) {
+    try {
+        const result = await db.query('SELECT * FROM products');
+        response.status(200).json(result.rows);
+    } catch (error) {
+        console.error('Error fetching products:', error);
+        response.status(500).json({ error: 'Failed to fetch products' });
+    }
+}
 
 }
 
