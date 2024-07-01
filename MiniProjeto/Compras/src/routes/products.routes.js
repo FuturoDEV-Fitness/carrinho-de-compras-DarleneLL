@@ -7,6 +7,6 @@ const productsRoutes = new Router()
 productsRoutes.post('/', productsController.create);
 
 // Rota para listar todos os produtos
-router.get('/', productsController.getAllProducts);
+productsRoutes.get('/', productsController.getAllProducts);
 
 module.exports = productsRoutes;
