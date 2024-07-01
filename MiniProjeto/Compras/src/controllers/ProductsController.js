@@ -1,7 +1,6 @@
 const Database = require('../database/connection')
 
 const db = new Database();
-
 class ProductsController extends Database{
 
 // Método para criar um novo produto
@@ -56,6 +55,49 @@ static async getAllProducts(request, response) {
     }
 }
 
-}
+ // Método para listar um produto com detalhes
+ static async getProductDetails(request, response) {
+    const { id } = request.params;
 
+      const result = await db.query(
+      `SELECT 
+        p.id as product_id, 
+        p.name as product_name,
+        p.amount as product_amount, 
+        p.color as product_color, 
+        p.voltage as product_voltage, 
+        p.description as product_description, 
+        c.id as category_id, 
+        c.name as category_name
+      FROM 
+        products p
+      JOIN 
+        categories c
+      ON 
+        p.category_id = c.id
+      WHERE 
+        p.id =  $1`, [id]
+      )
+    
+    try {
+      if (result.rows.length === 0) {
+        return response.status(404).json({ message: 'Produto não encontrado' });
+      }
+
+      const product = result.rows[0];
+      response.json({
+        id: product.product_id,
+        name: product.product_name,
+        description: product.product_description,
+        price: product.product_price,
+        category: {
+          id: product.category_id,
+          name: product.category_name        }
+      });
+    } catch (error) {
+      console.error('Erro ao buscar detalhes do produto:', error);
+      response.status(500).json({ message: 'Erro interno do servidor' });
+    }
+  }
+}
 module.exports = ProductsController
