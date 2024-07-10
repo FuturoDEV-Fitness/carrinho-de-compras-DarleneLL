@@ -6,7 +6,7 @@ class Database {
             user: 'postgres',     
             host: 'localhost',        
             database: 'carrinho_de_compras',  
-            password: 'D@mada123',     
+            password: 'postgres',     
             port: 5432,                
         });
     }
